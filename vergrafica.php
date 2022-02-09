@@ -118,7 +118,7 @@ li a:hover:not(.active) {
 	
 <?php
 
-
+/*Este código toma los datos de una base de datos en los que se almacenan los egresos e ingresos de una empresa. Muestra los egresos de cada categoría en base a los egresos totales para que a medida que aumentan los gastos el gráfico no crezca de manera indefinida. La base de datos es alimentada por un sistema de información (Model View Controller). Lo que permite comparar los egresos con los ingresos en tiempo real.*/
 
 $host="......";
 
