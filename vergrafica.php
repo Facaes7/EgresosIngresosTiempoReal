@@ -288,6 +288,7 @@ mysqli_close($enlace);
 	ctx.beginPath();
 	ctx.arc(50, 80, Math.sqrt((6362*por2/100)/Math.PI), 0, 2 * Math.PI);
 	/*Al crear el circulo se tiene en cuenta el siguiente orden: Coordenada centro x, Coordenada centro y, radio, angulo inicial, angulo final*/
+	/*
 	ctx.stroke();
 	ctx.font = "14px Comic Sans MS";
 	ctx.fillStyle = "red";
@@ -311,6 +312,7 @@ mysqli_close($enlace);
 	ctx.fillText("Operacion", 450, 175);
 	ctx.beginPath();
 	ctx.arc(550, 80, 45, 0, 2 * Math.PI);
+	/*Los egresos totales representan un radio de 45, sea cual sea su valor*/ 
 	ctx.stroke();
 	ctx.font = "20px Comic Sans MS";
 	ctx.fillText("Egresos T", 550, 175);
