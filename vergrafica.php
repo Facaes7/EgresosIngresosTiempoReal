@@ -270,6 +270,7 @@ mysqli_close($enlace);
 	pvalort.innerHTML=totalegresos;
   
 	var por2=parseInt(ivalort2.value)*100/totalegresos;
+	/*Las categorías por2,por3,por4,por5,por6,por7 es un porcentaje de los egresos totales*/
 	var por3=parseInt(ivalort3.value)*100/totalegresos;
 	var por4=parseInt(ivalort4.value)*100/totalegresos;
 	var por5=parseInt(ivalort5.value)*100/totalegresos;
@@ -288,7 +289,8 @@ mysqli_close($enlace);
 	ctx.beginPath();
 	ctx.arc(50, 80, Math.sqrt((6362*por2/100)/Math.PI), 0, 2 * Math.PI);
 	/*Al crear el circulo se tiene en cuenta el siguiente orden: Coordenada centro x, Coordenada centro y, radio, angulo inicial, angulo final*/
-	/*
+	/*La categoría tiene un radio que depende del porcentaje con respecto a los egresos totales*/
+	/*Podría ser más sencillo egresosCategoría1*45/egresosTotales.*/ 
 	ctx.stroke();
 	ctx.font = "14px Comic Sans MS";
 	ctx.fillStyle = "red";
