@@ -110,7 +110,7 @@ li a:hover:not(.active) {
 	<label>   Total Operacion:<input id="ivalort6" value="valor!" readonly>  </label>
 	<label>      Total Ingresos:<input id="ivalort7" value="valor!" readonly>  </label>
 	<br>
-	<canvas id="myCanvas" width="800" height="180" style="border:1px solid #000000;">
+	<canvas id="myCanvas" width="800" height="270" style="border:1px solid #000000;">
 	</canvas>
 	
 	<br>
