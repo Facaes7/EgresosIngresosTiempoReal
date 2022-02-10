@@ -269,13 +269,13 @@ mysqli_close($enlace);
 	var totalegresos=parseFloat(ivalort2.value)+parseFloat(ivalort3.value)+parseFloat(ivalort4.value)+parseFloat(ivalort5.value)+parseFloat(ivalort6.value);
 	pvalort.innerHTML=totalegresos;
   
-	var por2=parseInt(ivalort2.value)*100/totalegresos;
+	var por2=45*parseInt(ivalort2.value)/totalegresos;
 	/*Las categorías por2,por3,por4,por5,por6,por7 es un porcentaje de los egresos totales*/
-	var por3=parseInt(ivalort3.value)*100/totalegresos;
-	var por4=parseInt(ivalort4.value)*100/totalegresos;
-	var por5=parseInt(ivalort5.value)*100/totalegresos;
-	var por6=parseInt(ivalort6.value)*100/totalegresos;
-	var por7=parseInt(ivalort7.value)*100/totalegresos;
+	var por3=45*parseInt(ivalort3.value)/totalegresos;
+	var por4=45*parseInt(ivalort4.value)/totalegresos;
+	var por5=45*parseInt(ivalort5.value)/totalegresos;
+	var por6=45*parseInt(ivalort6.value)/totalegresos;
+	var por7=45*parseInt(ivalort7.value)/totalegresos;
 	var utBruta=((parseFloat(ivalort7.value))-totalegresos);
 	pUtBru.style.color="green";
 	if(utBruta<0){
@@ -287,42 +287,42 @@ mysqli_close($enlace);
   var c = document.getElementById("myCanvas");
 	var ctx = c.getContext("2d");
 	ctx.beginPath();
-	ctx.arc(50, 80, Math.sqrt((6362*por2/100)/Math.PI), 0, 2 * Math.PI);
+	ctx.arc(50, 120, por2, 0, 2 * Math.PI);
 	/*Al crear el circulo se tiene en cuenta el siguiente orden: Coordenada centro x, Coordenada centro y, radio, angulo inicial, angulo final*/
 	/*La categoría tiene un radio que depende del porcentaje con respecto a los egresos totales*/
-	/*Podría ser más sencillo egresosCategoría1*45/egresosTotales.*/ 
+	
 	ctx.stroke();
 	ctx.font = "14px Comic Sans MS";
 	ctx.fillStyle = "red";
 	ctx.textAlign = "center";
-	ctx.fillText("Jornales", 50, 175);
+	ctx.fillText("Jornales", 50, 235);
 	ctx.beginPath();
-	ctx.arc(150, 80, Math.sqrt((6362*por3/100)/Math.PI), 0, 2 * Math.PI);
+	ctx.arc(150, 120, por3, 0, 2 * Math.PI);
 	ctx.stroke();
-	ctx.fillText("Insumos", 150, 175);
+	ctx.fillText("Insumos", 150, 235);
 	ctx.beginPath();
-	ctx.arc(250, 80, Math.sqrt((6362*por4/100)/Math.PI), 0, 2 * Math.PI);
+	ctx.arc(250, 120, por4, 0, 2 * Math.PI);
 	ctx.stroke();
-	ctx.fillText("Maquinaria", 250, 175);
+	ctx.fillText("Maquinaria", 250, 235);
 	ctx.beginPath();
-	ctx.arc(350, 80, Math.sqrt((6362*por5/100)/Math.PI), 0, 2 * Math.PI);
+	ctx.arc(350, 120, por5, 0, 2 * Math.PI);
 	ctx.stroke();
-	ctx.fillText("Transporte", 350, 175);
+	ctx.fillText("Transporte", 350, 235);
 	ctx.beginPath();
-	ctx.arc(450, 80, Math.sqrt((6362*por6/100)/Math.PI), 0, 2 * Math.PI);
+	ctx.arc(450, 120, por6, 0, 2 * Math.PI);
 	ctx.stroke();
-	ctx.fillText("Operacion", 450, 175);
+	ctx.fillText("Operacion", 450, 235);
 	ctx.beginPath();
-	ctx.arc(550, 80, 45, 0, 2 * Math.PI);
+	ctx.arc(550, 120, 45, 0, 2 * Math.PI);
 	/*Los egresos totales representan un radio de 45, sea cual sea su valor*/ 
 	ctx.stroke();
 	ctx.font = "20px Comic Sans MS";
-	ctx.fillText("Egresos T", 550, 175);
+	ctx.fillText("Egresos T", 550, 235);
 	ctx.beginPath();
-	ctx.arc(700, 80, Math.sqrt((6362*por7/100)/Math.PI), 0, 2 * Math.PI);
+	ctx.arc(700, 120, por7, 0, 2 * Math.PI);
 	ctx.stroke();
 	ctx.fillStyle = "green";
-	ctx.fillText("Ingresos", 700, 175);
+	ctx.fillText("Ingresos", 700, 235);
 	
 </script>	
 
